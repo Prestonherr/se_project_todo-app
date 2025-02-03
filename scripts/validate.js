@@ -1,9 +1,3 @@
-const enableValidation => {
-  constructor(settings, formElement) {
-    
-  }
-}
-// update
 const showInputError = (formElement, inputElement, errorMessage, settings) => {
   const errorElementId = `#${inputElement.id}-error`;
   const errorElement = formElement.querySelector(errorElementId);
@@ -52,10 +46,6 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
 
 const setEventListeners = (formElement, settings) => {
   const inputList = Array.from(
-    formElement.querySelectorAll(settings.inputSelector),
-  );
-  const buttonElement = formElement.querySelector(
-    settings.submitButtonSelector,
     formElement.querySelectorAll(settings.inputSelector)
   );
   const buttonElement = formElement.querySelector(
@@ -80,4 +70,4 @@ const enableValidation = (settings) => {
   setEventListeners(formElement, settings);
 };
 
-enableValidation(validationConfig);
+// enableValidation(validationConfig);
